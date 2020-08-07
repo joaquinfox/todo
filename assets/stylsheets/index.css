@@ -1,3 +1,43 @@
+html,
 body {
-  /* background-color: rebeccapurple; */
+  margin: 0;
+}
+body {
+  background: #2980b9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #6dd5fa,
+    #2980b9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #6dd5fa,
+    #2980b9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.completed {
+  color: rgba(24, 24, 32, 0.541);
+  text-decoration: line-through;
+}
+#container {
+  background-color: rgb(246, 250, 249);
+  margin: 5% auto;
+  width: 30%;
+  padding: 2%;
+  box-shadow: ;
+}
+
+#container h1 {
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 2%;
+  /* margin: auto; */
 }

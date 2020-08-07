@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>To Do</title>
     <script
       src="https://kit.fontawesome.com/e1919e0746.js"
       crossorigin="anonymous"
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./assets//stylsheets/index.css" />
   </head>
   <body>
-    <div>
+    <div id="container">
       <h1>To-Do</h1>
       <input type="text" placeholder="Add a new todo ..." />
       <ul>
@@ -28,8 +28,26 @@
     </div>
 
     <script>
+      $('ul').on('click', 'li', function () {
+        $(this).toggleClass('completed');
+      });
 
-        
+      $('ul').on('click', 'span', function (event) {
+        $(this)
+          .parent()
+          .fadeOut(500, function () {
+            $(this).remove();
+          });
+        event.stopPropagation;
+      });
+
+      $('input').keypress(function (event) {
+        if (event.which === 13) {
+          let newTask = $(this).val();
+          $(this).val('');
+          $('ul').append('<li><span> X </span>' + newTask + '</li>');
+        }
+      });
     </script>
   </body>
 </html>
