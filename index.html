@@ -17,37 +17,23 @@
   </head>
   <body>
     <div id="container">
-      <h1>To-Do</h1>
+      <h1>To-Do<i class="fas fa-plus"></i></h1>
       <input type="text" placeholder="Add a new todo ..." />
       <ul>
-        <li><span> X </span>something to do</li>
-        <li><span> X </span>something to do</li>
-        <li><span> X </span>something to do</li>
-        <li><span> X </span>something to do</li>
+        <li>
+          <span><i class="fa fa-trash"></i> </span>Practice Juggling
+        </li>
+        <li>
+          <span><i class="fa fa-trash"></i> </span>Eat a snack
+        </li>
+        <li>
+          <span><i class="fa fa-trash"></i> </span>Save the world
+        </li>
+        <li>
+          <span><i class="fa fa-trash"></i> </span>Work on memoir
+        </li>
       </ul>
     </div>
-
-    <script>
-      $('ul').on('click', 'li', function () {
-        $(this).toggleClass('completed');
-      });
-
-      $('ul').on('click', 'span', function (event) {
-        $(this)
-          .parent()
-          .fadeOut(500, function () {
-            $(this).remove();
-          });
-        event.stopPropagation;
-      });
-
-      $('input').keypress(function (event) {
-        if (event.which === 13) {
-          let newTask = $(this).val();
-          $(this).val('');
-          $('ul').append('<li><span> X </span>' + newTask + '</li>');
-        }
-      });
-    </script>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>
