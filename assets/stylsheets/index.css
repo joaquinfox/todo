@@ -24,7 +24,8 @@ body {
   color: rgba(24, 24, 32, 0.541);
   text-decoration: line-through;
 }
-#container,#container2 {
+#container,
+#container2 {
   background-color: rgb(246, 250, 249);
   margin: 5% auto;
   width: 50%;
@@ -79,4 +80,13 @@ span {
 }
 li:hover span {
   width: 2rem;
+}
+
+#vanilla-input {
+  transition: all ease 1s;
+}
+.hideinput {
+  transition: all ease 1s;
+
+  display: none;
 }
