@@ -51,7 +51,8 @@ input.addEventListener('keypress', (e) => {
       liNew.addEventListener('click', () => {
         liNew.classList.toggle('completed');
       });
-      let trash = liNew.contains('span');
+      // document.querySelector()
+      // let trash = liNew.contains('span');
       // trash[0].addEventListener('click', () => {
       //   console.log('hanga banga');
       // });
