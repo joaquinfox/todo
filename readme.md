@@ -1,18 +1,46 @@
 # TO DO app
+
 I built this as an exercise in DOM manipulation with jQuery and vanilla js.
 
 It has three dimensions as follows.
 
 ### jQuery
+
 This is a jQuery demo which is run in the browser as a stand alone to do app. The purpose here is drill jQuery methods. Key methods used here are the following
-* The use of event.stopPropagation is applied to a 'trash' icon in a span. This is to *prevent* deletion of the parent li when anything *other than the span* is clicked.
-* The use of event [keypress](https://api.jquery.com/keypress/) with [event.which](https://api.jquery.com/event.which/#event-which1) to capture the user action of pressing the enter key.
+
+- The use of event.stopPropagation is applied to a 'trash' icon in a span. This is to _prevent_ deletion of the parent li when anything _other than the span_ is clicked.
+
+```
+$('ul').on('click', 'span', function (event) {
+  $(this)
+    .parent()
+    .fadeOut(500, function () {
+      $(this).remove();
+    });
+  event.stopPropagation();
+});
+
+```
+
+- The use of event [keypress](https://api.jquery.com/keypress/) with [event.which](https://api.jquery.com/event.which/#event-which1) to capture the user action of pressing the enter key.
+
+```
+$('input').keypress(function (event) {
+  if (event.which === 13) {
+    let newTask = $(this).val();
+    $(this).val('');
+    $('ul').append(
+      '<li><span> <i class="fa fa-trash"></i></span>' + newTask + '</li>'
+    );
+  }
+});
+
+```
 
 ### Refactor to vanilla JS
+
 Here I remove jQuery and replicate the original functionality with vanilla JavaScript.
 
-
-
 ### Persistence with MondoDB
-In this view I link the app to a database
 
+Last I persist data to a non-relational database.
