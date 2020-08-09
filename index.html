@@ -18,8 +18,8 @@
   <body>
     <div id="container">
       <h1>To-Do with jQuery<i class="fas fa-plus"></i></h1>
-      <input type="text" placeholder="Add a new todo ..." />
-      <ul>
+      <input id="jqinput" type="text" placeholder="Add a new todo ..." />
+      <ul id="jqul">
         <li>
           <span><i class="fa fa-trash"></i> </span>Practice Juggling
         </li>
@@ -34,10 +34,13 @@
         </li>
       </ul>
     </div>
-    <div id="container">
-      <h1>Refactor with vanilla JS<i class="fas fa-plus"></i></h1>
-      <input type="text" placeholder="Add a new todo ..." />
-      <ul>
+
+    <div id="container2">
+      <h1 class="vanilla">
+        Refactor with vanilla JS<i class="fas fa-plus"></i>
+      </h1>
+      <input class="vanilla" type="text" placeholder="Add a new todo ..." />
+      <ul class="vanilla">
         <li>
           <span><i class="fa fa-trash"></i> </span>Practice Juggling
         </li>
@@ -53,5 +56,6 @@
       </ul>
     </div>
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/vanilla.js"></script>
   </body>
 </html>
