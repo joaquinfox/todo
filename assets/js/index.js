@@ -22,5 +22,5 @@ $('#jq-input').keypress(function (event) {
 });
 
 $('.fa-plus').click(function () {
-  $('#jqinput').fadeToggle();
+  $('#jq-input').fadeToggle();
 });
