@@ -39,5 +39,19 @@ In order to avoid conflicts between the jQuery and vanilla versions, element id'
 ### Refactor to vanilla JS
 Here I remove jQuery and replicate the original app functions with vanilla JavaScript.
 
+The end result is 48 lines of code, after subtracting comments. This compares to 26 lines of code using jQuery.
+
+The main difficulty was in applying the delete functionality to the new and appended todo items.
+```
+    let target = liNew.querySelector('.fa-trash');
+      target.addEventListener('click', () => {
+        target.parentNode.parentNode.remove();
+      });
+
+```
+The key method here is [Element.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector) which I use above to select the new item's trash icon.
+
+
+
 ### Persistence with MondoDB
 Last I persist data to a non-relational database.
