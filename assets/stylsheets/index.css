@@ -19,6 +19,12 @@ body {
   box-sizing: border-box;
   font-family: sans-serif;
 }
+nav {
+  width: 50rem;
+  margin: auto;
+  background-color: #fff;
+  padding: 1%;
+}
 
 .completed {
   color: rgba(24, 24, 32, 0.541);

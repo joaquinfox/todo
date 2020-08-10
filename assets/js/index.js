@@ -1,8 +1,8 @@
-$('#jqul').on('click', 'li', function () {
+$('#jq-ul').on('click', 'li', function () {
   $(this).toggleClass('completed');
 });
 
-$('#jqul').on('click', 'span', function (event) {
+$('#jq-ul').on('click', 'span', function (event) {
   $(this)
     .parent()
     .fadeOut(500, function () {
@@ -11,11 +11,11 @@ $('#jqul').on('click', 'span', function (event) {
   event.stopPropagation();
 });
 
-$('#jqinput').keypress(function (event) {
+$('#jq-input').keypress(function (event) {
   if (event.which === 13) {
     let newTask = $(this).val();
     $(this).val('');
-    $('#jqul').append(
+    $('#jq-ul').append(
       '<li><span> <i class="fa fa-trash"></i></span>' + newTask + '</li>'
     );
   }

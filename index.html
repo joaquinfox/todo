@@ -14,14 +14,23 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./assets/stylsheets/index.css" />
+    <script defer src="./assets/js/index.js"></script>
+    <script defer src="./assets/js/vanilla.js"></script>
   </head>
   <body>
+    <nav>
+      <p>
+        This simple to-do app is an exercise in DOM manipulation and element selection with JavaScript. It displays the same
+        app twice, one version coded in jQuery, the other in vanilla JavaScript.
+        For a discussion see the <a href="">readme</a>
+      </p>
+    </nav>
     <div id="container">
       <h1>To-Do with jQuery<i class="fas fa-plus"></i></h1>
       <input id="jq-input" type="text" placeholder="Add a new todo ..." />
       <ul id="jq-ul">
         <li>
-          <span><i class="fa fa-trash"></i> </span>Practice Juggling
+          <span><i class="fa fa-trash"></i> </span>monkey around
         </li>
         <li>
           <span><i class="fa fa-trash"></i> </span>Eat a snack
@@ -39,23 +48,21 @@
       <h1 class="vanilla">
         To-do Refactored to vanilla JS<i class="fas fa-plus"></i>
       </h1>
-      <input class="vanilla" type="text" placeholder="Add a new todo ..." />
-      <ul class="vanilla">
-        <li>
+      <input class="input-vanilla" type="text" placeholder="Add a new todo ..." />
+      <ul class="ul-vanilla">
+        <li class='li-vanilla'>
           <span><i class="fa fa-trash"></i> </span>Practice Juggling
         </li>
-        <li>
+        <li class='li-vanilla'>
           <span><i class="fa fa-trash"></i> </span>Eat a snack
         </li>
-        <li>
+        <li class='li-vanilla'>
           <span><i class="fa fa-trash"></i> </span>Save the world
         </li>
-        <li>
+        <li class='li-vanilla'>
           <span><i class="fa fa-trash"></i> </span>Work on memoir
         </li>
       </ul>
     </div>
-    <script src="./assets/js/index.js"></script>
-    <script src="./assets/js/vanilla.js"></script>
   </body>
 </html>

@@ -1,10 +1,10 @@
 // Variable declarations
-let lis = document.querySelectorAll('li');
-let plus = document.querySelector('.fa-plus');
+let lis = document.querySelectorAll('.li-vanilla');
+let plus = document.querySelector('.vanilla .fa-plus');
 // let trash = document.querySelectorAll('.fa-trash');
 let trash = document.querySelectorAll('span');
-let input = document.querySelector('#vanilla-input');
-let ul = document.querySelector('ul');
+let input = document.querySelector('.input-vanilla');
+let ul = document.querySelector('.ul-vanilla');
 
 // Toggle class completed
 lis.forEach((li) => {
@@ -39,6 +39,7 @@ input.addEventListener('keypress', (e) => {
       // Add style toggle to new item
       liNew.addEventListener('click', (event) => {
         event.stopPropagation();
+        liNew.classList.add('li-vanilla')
         liNew.classList.toggle('completed');
       });
       // Add trash functionality to new item
